@@ -176,6 +176,7 @@ func getVerifyID(uuid, cookie, Ticket string) (string, error) {
 	return "", nil
 }
 
+// https://weixin110.qq.com/security/acct/newreadtemplate?t=logincheck/index&ticket=1_1b88c86386c34a97b317a4202644f868&agreement=1&lang=zh_CN
 func submitPinAndCheck(secverifyid, uuid, pin, Ticket string) (bool, error) {
 	url := "https://weixin110.qq.com/security/acct/commverifypincgi?t=extdevsignin/slaveverify&ticket=" + Ticket + "&step=submit_pin&secverifyid=" + secverifyid + "&wechat_real_lang=zh_CN"
 	requestData := SubmitPinRequest{

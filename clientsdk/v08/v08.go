@@ -27,6 +27,8 @@ func init() {
 		libPath = "lib\\v08.dll"
 	case "linux":
 		libPath = "libv08.so"
+	case "darwin":
+		libPath = "libv08.so"
 	default:
 		panic("unsupported platform")
 	}
